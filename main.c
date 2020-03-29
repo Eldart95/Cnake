@@ -13,7 +13,21 @@ void screen_reset(){
     SetConsoleCursorPosition(h_out,pos);
 }
 
+void snake_art(){
+    FILE* f;
+    f=fopen("snake_art.txt","r");
+    char c;
+    c=fgetc(f);
+    while(c!=EOF){
+        printf("%c",c);
+        c=fgetc(f);
+    }
+    fclose(f);
+
+}
+
 int welcome(){
+    snake_art();
     printf("Hello and welcome to Cnake\n");
     printf("Please choose a number between 1 to 3 to determine the difficulty\nthen press ENTER. \n");
     printf("1-I have two left hands\n2-I can handle slow games\n3-I'm pro\n");
