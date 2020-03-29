@@ -139,7 +139,7 @@ void movement(int dif){
     if(dir == 'd'){
         y++;
         if(Field[x][y]!=0 && Field[x][y]!=-1) { game_over(); }
-        if(y==M-1){
+        if(y==M){
             if(dif==1)y=0;
             else game_over();
         }
@@ -188,7 +188,7 @@ void movement(int dif){
     if(dir == 's'){
         x++;
         if(Field[x][y]!=0 && Field[x][y]!=-1) { game_over(); }
-        if(x==K-1){
+        if(x==K){
          if(dif==1) x=0;
          else game_over();
         }
