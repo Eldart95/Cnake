@@ -21,6 +21,7 @@ int user_input;
 
 int is_over(){
     if(game==0) return 0;
+    score=0;
     return 1;
 }
 
@@ -101,12 +102,15 @@ void game_over(){
     Sleep(1500);
     system("Cls");
     if(score>high_score){
+        high_score=score;
         printf("    New High Score: %d!!!\n\n",score);
         system("pause");
         f=fopen("high_score.txt","w");
         fprintf(f,"%d",score);
         fclose(f);
+
     }
+    score=0;
     system("Cls");
     printf("\n\n              GAME OVER");
     printf("                  SCORE: %d \n\n ",score);

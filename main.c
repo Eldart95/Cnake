@@ -3,7 +3,13 @@
 #include <windows.h>
 #include <stdlib.h>
 #include <conio.h>
-int is_running=0;
+#include <unistd.h>
+#include <pthread.h>
+
+
+
+
+
 void screen_reset(){
     HANDLE h_out;
     COORD pos;
@@ -42,15 +48,14 @@ int welcome(){
     return input;
 }
 
-
+int is_running=0;
 int main(){
     int difficulty = welcome();
-
-
     snake_init();
     randomize();
 
     while(is_running==0){
+
         randomize();
         print_borders();
         screen_reset();
@@ -61,10 +66,6 @@ int main(){
         else if(difficulty==2) Sleep(50);
         else Sleep(5);
         is_running = is_over();
-
-
-
-
 
     }
 
