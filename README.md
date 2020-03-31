@@ -6,7 +6,7 @@ Just press the green "clone" button to the right and download a zip file, then e
 
 
 ## How to play 
-When the game is running, choose your desired difiiculty level. 
+When the game is running, choose your desired difiiculty level, now start having fun
 
 ## Keys
 'w' for up, 'd' for down, 'a' to turn left and 'd' to turn right
